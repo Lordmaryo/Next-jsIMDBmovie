@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "git.decorations.enabled": true,
+    "git.enabled": true,
+    "git.enableSmartCommit": false
+}
