@@ -14,7 +14,7 @@ const Header = () => {
           <span className="font-bold">Movies</span>
         </div>
       </Link>
-      <div className="flex flex-row gap-2 md:gap-4 items-center text-sm sm:text-lg ml-2">
+      <div className="flex flex-row gap-2 md:gap-4 items-center text-sm sm:text-base ml-2">
         <DarkModeswitch />
         <MenuItems Title={"HOME"} Address="/" Icon={CiHome} />
         <MenuItems
