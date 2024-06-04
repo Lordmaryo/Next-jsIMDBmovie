@@ -12,9 +12,13 @@ const MenuItems = ({ Title, Address, Icon }: MenuItemsProps) => {
     <div>
       <Link href={Address}>
         <div className="sm:hidden text-2xl">
-          <Icon />
+          <span className="hover:text-amber-500 transition-colors">
+            <Icon />
+          </span>
         </div>
-        <p className="hidden sm:inline hover:text-amber-500 transition-colors">{Title}</p>
+        <p className="hidden sm:inline hover:text-amber-500 transition-colors">
+          {Title}
+        </p>
       </Link>
     </div>
   );

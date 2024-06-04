@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
 import "@radix-ui/themes/styles.css";
-import { Theme } from '@radix-ui/themes';
+import { Theme } from "@radix-ui/themes";
+import Provider from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Theme>
-          <Header />
-          <main>{children}</main>
+          <Provider>
+            <Header />
+            <main>{children}</main>
+          </Provider>
         </Theme>
       </body>
     </html>
