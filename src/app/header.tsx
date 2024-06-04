@@ -5,7 +5,6 @@ import { IoInformationCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 import DarkModeswitch from "./DarkModeswitch";
 
-// test remote repository 3
 
 const Header = () => {
   return (
