@@ -8,7 +8,7 @@ interface ProviderProps {
 const provider = ({ children }: ProviderProps) => {
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
-      <div className="dark:bg-[#171717] min-h-screen select-none transition-colors duration-300">
+      <div className="dark:bg-[#171717] min-h-screen transition-colors duration-300">
         {children}
       </div>
     </ThemeProvider>
