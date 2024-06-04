@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="flex flex-row justify-between p-3 mx-w-6xl mx-auto">
+    <div className="flex flex-row justify-between pt-3 px-10 mx-w-6xl mx-auto">
       <Link href="/">
         <div className="flex items-center gap-1 text-base sm:text-lg">
           <span className="bg-amber-500 font-bold p-1 rounded-lg">IMDb</span>
