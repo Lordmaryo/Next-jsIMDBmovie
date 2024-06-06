@@ -7,7 +7,9 @@ interface DataProps {
 }
 
 async function fetchData(endpoint: string): Promise<DataProps[]> {
-    const result = await fetch(`https://api.themoviedb.org/3/${endpoint}?api_key=${API_KEY}`);
+    const result = await fetch(`https://api.themoviedb.org/3/${endpoint}?api_key=${API_KEY}x`, {
+        next: { revalidate: 1000 }
+    });
     const data = await result.json();
     return data.results as DataProps[];
 }
@@ -27,3 +29,4 @@ export async function upComingMovies(): Promise<DataProps[]> {
 export async function fanFavoritesMovies(): Promise<DataProps[]> {
     return fetchData('movie/popular');
 }
+
