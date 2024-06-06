@@ -7,7 +7,7 @@ import DarkModeswitch from "./DarkModeswitch";
 
 const Header = () => {
   return (
-    <div className="flex flex-row items-center justify-between p-5 max-w-6xl mx-auto">
+    <div className="flex flex-row items-center justify-between py-5 max-w-6xl mx-auto">
       <Link href="/">
         <div className="flex items-center gap-1 text-base sm:text-lg">
           <span className="bg-amber-500 font-bold p-1 rounded-lg">IMDb</span>

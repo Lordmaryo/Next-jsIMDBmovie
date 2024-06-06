@@ -1,26 +1,26 @@
 import React from "react";
-import Trending from "./HomeProvider/Trending";
-
-interface DataProps {
-  id: number;
-  original_title: string;
-}
-
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-
-async function fetchTrendingData(): Promise<DataProps[]> {
-  const result = await fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`);
-  const data = await result.json();
-  return data.results as DataProps[];
-}
+import { fanFavorites, fetchTrendingData, topRated, upComingMovies } from "./ApIProvider/APIs";
+import FanFavorites from "./HomeProvider/FanFavorites";
+import TopRated from "./HomeProvider/TopRated";
+import TrendingPage from "./HomeProvider/Trending";
+import UpComing from "./HomeProvider/UpComing";
 
 const Page = async () => {
-  const data = await fetchTrendingData();
-  
+  const trendingData = await fetchTrendingData();
+  const topRatedData = await topRated(); 
+  const upComingData = await upComingMovies();
+  const fansFavoritesData = await fanFavorites();
+
   return (
-    <div>
+    <div className="max-w-6xl mx-auto pb-10 space-y-5">
       <h2>Trending</h2>
-      <Trending data={data}/>
+      <TrendingPage trendingData={trendingData} />
+      <h2>Top Rated</h2>
+      <TopRated topRatedData={topRatedData} />
+      <h2>Up Coming</h2>
+      <UpComing upComingData={upComingData}/>
+      <h2>Fan Favorites</h2>
+      <FanFavorites fansFavoritesData={fansFavoritesData}/>
     </div>
   );
 };

@@ -3,20 +3,21 @@ import React from "react";
 interface DataProps {
   id: number;
   original_title: string;
+  overview: string;
 }
 
 type TrendingDataProps = {
-  data: DataProps[];
+  trendingData: DataProps[];
 };
 
-const Trending = ({ data }: TrendingDataProps) => {
+const TrendingPage = ({ trendingData }: TrendingDataProps) => {
   return (
     <div>
-      {data.map((item) => (
+      {trendingData.map((item) => (
         <h1 key={item.id}>{item.original_title}</h1>
       ))}
     </div>
   );
 };
 
-export default Trending;
+export default TrendingPage;
