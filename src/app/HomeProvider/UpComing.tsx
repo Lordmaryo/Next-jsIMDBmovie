@@ -6,14 +6,14 @@ interface DataProps {
   overview: string;
 }
 
-type UpComingDataProps = {
-  upComingData: DataProps[];
+type UpComingMovieProps = {
+  upComingMoviesData: DataProps[];
 };
 
-const UpComing = ({ upComingData }: UpComingDataProps) => {
+const UpComing = ({ upComingMoviesData }: UpComingMovieProps) => {
   return (
     <div>
-      {upComingData.map((item) => (
+      {upComingMoviesData.map((item) => (
         <h1 key={item.id}>{item.original_title}</h1>
       ))}
     </div>

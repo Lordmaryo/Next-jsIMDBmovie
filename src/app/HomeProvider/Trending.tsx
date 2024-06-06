@@ -6,14 +6,14 @@ interface DataProps {
   overview: string;
 }
 
-type TrendingDataProps = {
-  trendingData: DataProps[];
+type TrendingDataMovieProps = {
+  trendingMoviesData: DataProps[];
 };
 
-const TrendingPage = ({ trendingData }: TrendingDataProps) => {
+const TrendingPage = ({ trendingMoviesData }: TrendingDataMovieProps) => {
   return (
     <div>
-      {trendingData.map((item) => (
+      {trendingMoviesData.map((item) => (
         <h1 key={item.id}>{item.original_title}</h1>
       ))}
     </div>

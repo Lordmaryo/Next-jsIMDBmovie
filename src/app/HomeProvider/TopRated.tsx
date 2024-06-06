@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 interface DataProps {
   id: number;
@@ -6,19 +6,18 @@ interface DataProps {
   overview: string;
 }
 
-type TopRatedProps = {
-  topRatedData: DataProps[];
+type TopRatedMovieProps = {
+  topRatedMoviesData: DataProps[];
 };
 
-
-const TopRated = ({ topRatedData }: TopRatedProps) => {
+const TopRated = ({ topRatedMoviesData }: TopRatedMovieProps) => {
   return (
     <div>
-       {topRatedData.map((item) => (
+      {topRatedMoviesData.map((item) => (
         <h1 key={item.id}>{item.original_title}</h1>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default TopRated
+export default TopRated;

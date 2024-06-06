@@ -6,18 +6,17 @@ interface DataProps {
     overview: string;
 }
 
-
 async function fetchData(endpoint: string): Promise<DataProps[]> {
     const result = await fetch(`https://api.themoviedb.org/3/${endpoint}?api_key=${API_KEY}`);
     const data = await result.json();
     return data.results as DataProps[];
 }
 
-export async function fetchTrendingData(): Promise<DataProps[]> {
+export async function fetchTrendingMovies(): Promise<DataProps[]> {
     return fetchData('trending/all/week');
 }
 
-export async function topRated(): Promise<DataProps[]> {
+export async function topRatedMovies(): Promise<DataProps[]> {
     return fetchData('movie/top_rated');
 }
 
@@ -25,6 +24,6 @@ export async function upComingMovies(): Promise<DataProps[]> {
     return fetchData('movie/upcoming');
 }
 
-export async function fanFavorites(): Promise<DataProps[]> {
+export async function fanFavoritesMovies(): Promise<DataProps[]> {
     return fetchData('movie/popular');
 }

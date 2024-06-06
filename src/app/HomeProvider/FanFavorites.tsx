@@ -6,14 +6,14 @@ interface DataProps {
   overview: string;
 }
 
-type fansFavoriteProps = {
-  fansFavoritesData: DataProps[];
+type fansFavoriteMovieProps = {
+  fansFavoritesMoviesData: DataProps[];
 };
 
-const FanFavorites = ({ fansFavoritesData }: fansFavoriteProps) => {
+const FanFavorites = ({ fansFavoritesMoviesData }: fansFavoriteMovieProps) => {
   return (
     <div>
-      {fansFavoritesData.map((item) => (
+      {fansFavoritesMoviesData.map((item) => (
         <h1 key={item.id}>{item.original_title}</h1>
       ))}
     </div>
