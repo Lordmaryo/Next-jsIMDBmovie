@@ -1,5 +1,5 @@
 import React from "react";
-import MenuItems from "./menuItems";
+import MenuItems from "./NavMenuItems";
 import { CiHome } from "react-icons/ci";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import Link from "next/link";
