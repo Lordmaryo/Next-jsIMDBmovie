@@ -1,4 +1,5 @@
 import { API_KEY } from "@/app/ApIProvider/APIs";
+import FormatCurrency from "@/app/utilities/FormatCurrency";
 import { Strong } from "@radix-ui/themes";
 import Image from "next/image";
 import React from "react";
@@ -42,7 +43,7 @@ const MoviePage = async ({ params }: any) => {
         <div className="space-y-1">
           <div>
             <Strong>Box Office </Strong>
-            <span>${movie.revenue.toLocaleString()}</span>
+            <span>${FormatCurrency(movie?.revenue)}</span>
           </div>
           <div>
             <Strong>Date Released </Strong>
@@ -50,7 +51,7 @@ const MoviePage = async ({ params }: any) => {
           </div>
           <div>
             <Strong>Vote Count </Strong>
-            <span>{movie.vote_count.toLocaleString()}</span>
+            <span>{movie.vote_count?.toLocaleString()}</span>
           </div>
         </div>
       </div>
