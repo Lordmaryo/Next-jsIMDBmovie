@@ -53,7 +53,7 @@ const TrendingPage = ({ trendingMoviesData }: TrendingMovieDataProps) => {
                 <span>{item.release_date || "Unavailable"}</span>
               </div>
               <strong>{item.original_title || item.name}</strong>
-              <Link href={`/movie/${item.id}`}>
+              <Link href={`/Movie/${item.id}`}>
                 <button className="text-zinc-800 font-bold bg-amber-500 hover:bg-amber-00 cursor-pointer w-full h-8 rounded-sm transition-colors">
                   View More
                 </button>

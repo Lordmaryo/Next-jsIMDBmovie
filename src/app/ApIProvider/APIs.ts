@@ -17,7 +17,7 @@ async function fetchData(endpoint: string): Promise<DataProps[]> {
         next: { revalidate: 60 }
     });
     const data = await result.json();
-    return data.results.slice(0, 10) as DataProps[];
+    return data.results.slice(0, 20) as DataProps[];
 }
 
 export async function fetchTrendingMovies(): Promise<DataProps[]> {
