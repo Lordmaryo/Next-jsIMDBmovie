@@ -41,7 +41,3 @@ body {
   background-color: #5f5d5d42;
   border-radius: 6px;
 }
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  /* background: #2e2d2d; */
-}
