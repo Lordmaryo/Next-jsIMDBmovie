@@ -1,5 +1,5 @@
 import { API_KEY } from "@/app/ApIProvider/APIs";
-import Result from "@/app/result";
+import Result from "@/app/components/Result";
 import React from "react";
 
 interface ParamsProps {

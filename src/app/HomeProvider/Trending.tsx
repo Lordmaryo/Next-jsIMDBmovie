@@ -1,4 +1,4 @@
-import Result from "../Result";
+import Result from "../components/Result";
 
 interface DataProps {
   id: number;
