@@ -23,25 +23,25 @@ const Page = async () => {
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-500 my-5">
           Trending
         </h2>
-        <TrendingPage trendingMoviesData={trendingMoviesData} />
+        <TrendingPage trendingMoviesData={trendingMoviesData || []} />
       </div>
       <div>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-500  my-5">
           Top Rated
         </h2>
-        <TopRated topRatedMoviesData={topRatedMoviesData} />
+        <TopRated topRatedMoviesData={topRatedMoviesData || []} />
       </div>
       <div>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-500  my-5">
           Up Coming
         </h2>
-        <UpComing upComingMoviesData={upComingMoviesData} />
+        <UpComing upComingMoviesData={upComingMoviesData || []} />
       </div>
       <div>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-500  my-5">
           Fan Favorites
         </h2>
-        <FanFavorites fansFavoritesMoviesData={fansFavoritesMoviesData} />
+        <FanFavorites fansFavoritesMoviesData={fansFavoritesMoviesData || []} />
       </div>
     </div>
   );

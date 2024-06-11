@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FC } from "react";
-import { CiSearch } from "react-icons/ci";
 
 interface MenuItemsProps {
   Title: string;
