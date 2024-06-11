@@ -36,8 +36,8 @@ const Cards = ({ results }: CardsProps) => {
             width={300}
             height={200}
           />
-          <div className="flex flex-row justify-between Resultss-center">
-            <div className="flex flex-row gap-1 Resultss-center">
+          <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row gap-1 items-center">
               <span className="text-amber-500">
                 <FaStar />
               </span>

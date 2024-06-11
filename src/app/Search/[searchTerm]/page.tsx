@@ -14,9 +14,23 @@ const SearchPage = async ({ params }: { params: ParamsProps }) => {
   );
 
   const data = await response.json();
-  console.log(data);
+  const checkErrors = !data.results || data.results.length === 0;
+  if (checkErrors) {
+    console.error("No results found");
+  }
 
-  return <div>{data && <Result results={data.results} />}</div>;
+  return (
+    <div className="max-w-6xl mx-auto py-5 px-2">
+      {checkErrors ? (
+        <h1 className="md:text-2xl sm:text-xl text-base font-bold my-5 ml-5">
+          <span className="font-extralight">No results for</span>
+          <span className="font-bold text-red-400"> {searchTerm}</span>
+        </h1>
+      ) : (
+        <Result results={data.results} />
+      )}
+    </div>
+  );
 };
 
 export default SearchPage;
