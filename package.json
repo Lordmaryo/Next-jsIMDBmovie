@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@radix-ui/themes": "^3.0.5",
+    "@splidejs/splide": "^4.1.4",
+    "framer-motion": "^11.2.10",
     "next-themes": "^0.3.0",
     "react-icons": "^5.2.1"
   }
