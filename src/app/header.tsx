@@ -39,7 +39,7 @@ const Header = () => {
         onSubmit={handleSubmit}
         className={
           toggleSearchButton
-            ? "flex items-center mx-3 border border-[#413f3f] rounded-md p-2"
+            ? "flex items-center mx-3 border border-[#413f3f] rounded-md p-2 max-w-[600px]"
             : "hidden sm:flex items-center mx-3 border border-[#413f3f] rounded-md p-2"
         }
       >
@@ -52,7 +52,7 @@ const Header = () => {
           type="text"
           className={
             toggleSearchButton
-              ? "w-full pl-2 outline-none bg-transparent z-10"
+              ? "pl-2 outline-none bg-transparent z-10"
               : "sm:w-[250px] md:w-[300px] lg:w-[500px] pl-2 outline-none bg-transparent"
           }
           placeholder="Search"
@@ -65,7 +65,11 @@ const Header = () => {
           onClick={() => setToggleSearchButton(!toggleSearchButton)}
           className="hover:text-amber-500 inline sm:hidden text-gray-400"
         >
-          <CiSearch size={30} />
+          {toggleSearchButton ? (
+            <span className="font-bold text-4xl">&times;</span>
+          ) : (
+            <CiSearch size={30} />
+          )}
         </button>
         {!toggleSearchButton && (
           <MenuItems Title={"Home"} Address="/" Icon={CiHome} />

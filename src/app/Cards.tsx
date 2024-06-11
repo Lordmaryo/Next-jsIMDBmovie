@@ -21,7 +21,6 @@ type CardsProps = {
 
 const Cards = ({ results }: CardsProps) => {
   return (
-    // <div>
     <div className="w-[300px]">
       <div
         style={{ flex: "0 0 100%", scrollSnapAlign: "start" }}
@@ -34,7 +33,6 @@ const Cards = ({ results }: CardsProps) => {
             }`}
             priority
             alt="movie poster"
-            // layout="responsive"
             width={300}
             height={200}
           />
@@ -56,7 +54,6 @@ const Cards = ({ results }: CardsProps) => {
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 
