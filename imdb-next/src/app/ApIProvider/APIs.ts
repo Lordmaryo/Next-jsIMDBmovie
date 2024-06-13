@@ -1,6 +1,6 @@
 export const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
-interface DataProps {
+export interface DataProps {
     id: number;
     original_title: string;
     overview: string;
